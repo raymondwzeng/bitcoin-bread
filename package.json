@@ -1,0 +1,19 @@
+{
+  "name": "bitcoin-bread",
+  "version": "1.0.0",
+  "description": "A full-stack mini-project that tracks the price of a loaf of bread in Bitcoin. Updated daily.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymondwzeng/bitcoin-bread.git"
+  },
+  "author": "raymondwzeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raymondwzeng/bitcoin-bread/issues"
+  },
+  "homepage": "https://github.com/raymondwzeng/bitcoin-bread#readme"
+}
