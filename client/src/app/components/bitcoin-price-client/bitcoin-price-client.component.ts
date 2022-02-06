@@ -17,10 +17,10 @@ export class BitcoinPriceClientComponent implements OnInit {
       if(data.price == 0) {
         this.price = 0;
       } else {
-        this.price = (data.breadPrice / data.price);
+        this.price = Number((data.breadPrice / data.price).toFixed(5));
       }
-      let priceChange = data.yesterdayPrice - data.price;
-      this.yesterdayComparison += (priceChange.toString()+" ("+ (priceChange/(data.yesterdayPrice)*100) +"%)");
+      let priceChange = Number((data.price - data.yesterdayPrice).toFixed(5));
+      this.yesterdayComparison += (("$" + priceChange.toFixed(2)).toString()+" ("+ (data.breadPrice/priceChange).toFixed(2) +" USD)");
     })
   }
 

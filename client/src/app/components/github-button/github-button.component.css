@@ -1,0 +1,14 @@
+#github-button {
+    margin: auto auto;
+    width: fit-content;
+}
+
+img {
+    margin:auto;
+    max-width: 5em;
+}
+
+img:hover {
+    transform: scale(1.1);
+    opacity: 0.3;
+}
