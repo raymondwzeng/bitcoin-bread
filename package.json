@@ -4,7 +4,7 @@
   "description": "A full-stack mini-project that tracks the price of a loaf of bread in Bitcoin. Updated daily.",
   "main": "index.js",
   "scripts": {
-    "start": "cd server && node index.js"
+    "start": "(cd client && ng build) && (cd ../ && cd server && node index.js)"
   },
   "repository": {
     "type": "git",

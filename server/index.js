@@ -17,7 +17,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors({
-    origin: ['https://bitcoin-bread.herokuapp.com', '*']
+    origin: ['https://bitcoin-bread.herokuapp.com']
 }));
 
 //TODO: Add GET request from specific domain (bitcoin-break.heroku or whatever)

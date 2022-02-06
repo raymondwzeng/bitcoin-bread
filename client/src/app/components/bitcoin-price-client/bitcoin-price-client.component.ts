@@ -13,7 +13,7 @@ export class BitcoinPriceClientComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<any>('http://localhost:4000/api/').subscribe(data => {
+    this.http.get<any>('https://bitcoin-bread.herokuapp.com/api/').subscribe(data => {
       if(data.price == 0) {
         this.price = 0;
       } else {
