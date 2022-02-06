@@ -1,0 +1,7 @@
+#footer-container {
+    background-color: antiquewhite;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}

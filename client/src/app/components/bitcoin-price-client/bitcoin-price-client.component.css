@@ -1,0 +1,11 @@
+#bitcoin-price {
+    width: 100%;
+    text-align: center;
+    font-size: 10ex;
+}
+
+#yesterday-comparison {
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+}

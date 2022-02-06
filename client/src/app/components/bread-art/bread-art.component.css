@@ -1,0 +1,47 @@
+#container {
+    margin: 10em auto 0 auto;
+    position: relative;
+    transform: rotate(-10deg);
+    width: fit-content;
+    --bread-inner-color: rgb(224, 194, 109);
+    --bread-outer-color: rgb(185, 90, 0);
+}
+
+#bread-top {
+    width: 16em;
+    height: 7em;
+    background-color: var(--bread-outer-color);
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto 10em auto;
+    transform: translateY(-150%);
+}
+
+#bread-outer {
+    width: 12em;
+    height: 10em;
+    background-color: var(--bread-outer-color);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 0 0 10% 10%;
+    transform: translateY(50%);
+}
+
+#bread-inner-top {
+    width: 12em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: var(--bread-inner-color);
+    position: relative;
+    margin: auto auto -7em auto;
+    transform: translateY(25%);
+}
+
+#bread-inner {
+    width: 9em;
+    height: 8em;
+    border-radius: 0 0 10% 10%;
+    background-color: var(--bread-inner-color);
+    position: relative;
+    margin: auto auto;
+}
