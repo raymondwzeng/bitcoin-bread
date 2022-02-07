@@ -35,7 +35,7 @@ const breadPrice = 1.53;
 let recentBTCPrice = 0;
 let yesterdayBTCPrice = 0;
 
-const clientSideStuff = path.join(__dirname, "..", process.env['CLIENT-PATH']); //Required filepathing join to get the client path due to how I set this up initially.
+const clientSideStuff = path.join(__dirname, "..", process.env['CLIENT_PATH']); //Required filepathing join to get the client path due to how I set this up initially.
 
 //Serve default page.
 app.get('/', (req, res) => {
@@ -57,7 +57,7 @@ const apiHeaders = {
     method: "POST",
     headers: {
         "content-type": "application/json",
-        "x-api-key": process.env["API-KEY"],
+        "x-api-key": process.env["API_KEY"],
     },
     body: JSON.stringify({
         currency: "USD",
@@ -76,7 +76,7 @@ let pingAPI = async () => {
     let todayString = today.toDateString();
     let price = await client.get(todayString);
     if(price == null) {
-        fetch(new Request(process.env['API-HOST']), apiHeaders)
+        fetch(new Request(process.env['API_HOST']), apiHeaders)
             .then(response => response.json())
             .then(data => {
                 if(data.rate == null) { //Something happened to the API, fallback to what we had before. Not sure if this is necessary, will come back to this.
@@ -111,7 +111,7 @@ let pingAPI = async () => {
 //Connects to our actual server to retrieve and grab data.
 let connectToDB = async () => {
     client = createClient({
-        url: `redis://${process.env['DB-USER']}:${process.env['DB-PASSWORD']}@${process.env['DB-URL']}:${process.env['DB-PORT']}`
+        url: `redis://${process.env['DB_USER']}:${process.env['DB_PASSWORD']}@${process.env['DB_URL']}:${process.env['DB_PORT']}`
     });
     
     await client.connect();
