@@ -121,5 +121,6 @@ let connectToDB = async () => {
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}...`);
     connectToDB();
+    pingAPI(); //Ping API once first to get data
     setInterval(pingAPI, 86400000); //Call to pingAPI every day.
 });
